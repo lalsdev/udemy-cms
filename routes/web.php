@@ -1,6 +1,9 @@
 <?php
 
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
 
 /*
@@ -37,10 +40,57 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/post/{id}', 'App\Http\Controllers\PostsController@index');
 
-Route::resource('posts', 'App\Http\Controllers\PostController');
+//Route::resource('posts', 'App\Http\Controllers\PostController');
+//
+//Route::get('contact/{name}', 'App\Http\Controllers\PostController@contactPage');
+//
+//Route::get('item/{item}/{color}/{size}', 'App\Http\Controllers\PostController@itemPage');
+//
+//Route::get('bladeTest', 'App\Http\Controllers\PostController@bladeExample');
 
-Route::get('contact/{name}', 'App\Http\Controllers\PostController@contactPage');
 
-Route::get('item/{item}/{color}/{size}', 'App\Http\Controllers\PostController@itemPage');
+Route::get('/insert', function(){
+   DB::insert('insert into product(price, stock, size, created_at) values(?,?,?,?)', [10, 18, 10, Carbon::now()]);
+});
 
-Route::get('bladeTest', 'App\Http\Controllers\PostController@bladeExample');
+Route::get('/readPriceGreaterThan1400', function(){
+   $result = DB::select('select * from product where price > 1400');
+   return $result;
+});
+
+Route::get('/updateOnePrice', function(){
+    $update = DB::table('product')
+        ->where('stock', '>', 5000)
+        ->update(['updated_at' => Carbon::now()]);
+    return $update;
+});
+
+Route::get('/deleteOneUnit', function(){
+   $delete = DB::table('product')
+       ->where('stock', '<', 50)
+       ->delete();
+   return $delete;
+});
+
+
+Route::get('/readSizeAbove25', function(){
+   $result = DB::select('select * from product where size > 25');
+   return $result;
+});
+
+Route::get('/readStock', function(){
+   $results = DB::select('select * from product');
+   foreach($results as $result){
+        dump('the stock left is ' . $result->stock);
+   }
+   return $results;
+});
+
+// ELOQUENT
+
+Route::get('/read', function(){
+   return Product::all();
+});
+
+// controller renvoie la réponse construite
+Route::get('/read/{id}','App\Http\Controllers\ProductController@show');

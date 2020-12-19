@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c67a6da8-d85f-4749-b9d9-74f8defea1e6" name="Default Changelist" comment="" />
+    <list default="true" id="c67a6da8-d85f-4749-b9d9-74f8defea1e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +15,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -129,7 +137,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TEST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Belgique/microservices" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
@@ -157,6 +165,9 @@
       <workItem from="1605513858386" duration="86000" />
       <workItem from="1607266549117" duration="10626000" />
       <workItem from="1607803961547" duration="3729000" />
+      <workItem from="1607865165818" duration="3515000" />
+      <workItem from="1608015449940" duration="3422000" />
+      <workItem from="1608369541781" duration="9256000" />
     </task>
     <servers />
   </component>
@@ -167,15 +178,20 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1607812864386">
+    <state x="540" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608380149433">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380149433" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608380108525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1605513942926" />
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1607280159851" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380108525" />
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607812864386" />
-    <state x="608" y="335" key="NewPhpFileDialog" timestamp="1607804346229">
+    <state x="608" y="335" key="NewPhpFileDialog" timestamp="1608380192881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="608" y="335" key="NewPhpFileDialog/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380192881" />
     <state x="608" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607804346229" />
     <state x="285" y="57" key="SettingsEditor" timestamp="1605473648619">
       <screen x="0" y="0" width="1536" height="824" />
