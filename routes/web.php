@@ -92,5 +92,38 @@ Route::get('/read', function(){
    return Product::all();
 });
 
+// ca trouve le produit d'id 3
+// find c'est une méthode inhéritée de la classe Model de Eloquent du coup peut l'utiliser sur le Model product pcq classe enfant
+Route::get('/find', function(){
+//   $product = Product::find(10);
+    $product = Product::findOrFail(10);
+    return $product;
+});
+
+Route::get('/orderByStockAmount', function(){
+   $products = Product::orderBy('stock', 'desc')->get();
+   return $products;
+});
+
 // controller renvoie la réponse construite
 Route::get('/read/{id}','App\Http\Controllers\ProductController@show');
+
+Route::get('/insert', function(){
+   $product = new Product;
+   $product->price = 100;
+   $product->stock = 10;
+   $product->size = 74;
+   $product->save();
+});
+
+Route::get('creation', function(){
+   Product::create(['price'=>542, 'stock'=>10, 'size'=>42]);
+});
+
+Route::get('/updateIt', function(){
+   return Product::where('stock', '<', 1000)->where('size', '>', 10)->where('price', '<', 600)->update(['price' => 1]);
+});
+
+Route::get('/deleteMany', function(){
+   return Product::where('price', '=', 1)->delete();
+});
