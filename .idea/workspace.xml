@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c67a6da8-d85f-4749-b9d9-74f8defea1e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +137,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Belgique/microservices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
@@ -167,7 +167,8 @@
       <workItem from="1607803961547" duration="3729000" />
       <workItem from="1607865165818" duration="3515000" />
       <workItem from="1608015449940" duration="3422000" />
-      <workItem from="1608369541781" duration="9256000" />
+      <workItem from="1608369541781" duration="9331000" />
+      <workItem from="1609062444755" duration="14217000" />
     </task>
     <servers />
   </component>
@@ -182,12 +183,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380149433" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608380108525">
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608454160517">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1605513942926" />
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380108525" />
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607812864386" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608454160517" />
     <state x="608" y="335" key="NewPhpFileDialog" timestamp="1608380192881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -197,5 +198,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="285" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605473648619" />
+    <state x="431" y="145" key="search.everywhere.popup" timestamp="1609069812613">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1609069812613" />
   </component>
 </project>

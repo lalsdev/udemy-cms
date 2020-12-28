@@ -4,6 +4,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
+use App\Models\User;
 
 
 /*
@@ -113,11 +114,12 @@ Route::get('/insert', function(){
    $product->price = 100;
    $product->stock = 10;
    $product->size = 74;
+   $product->user_id= 4;
    $product->save();
 });
 
 Route::get('creation', function(){
-   Product::create(['price'=>542, 'stock'=>10, 'size'=>42]);
+   Product::create(['price'=>100, 'stock'=>800, 'size'=>38]);
 });
 
 Route::get('/updateIt', function(){
@@ -127,3 +129,69 @@ Route::get('/updateIt', function(){
 Route::get('/deleteMany', function(){
    return Product::where('price', '=', 1)->delete();
 });
+
+Route::get('/deleteOne', function(){
+    return Product::destroy([1]);
+});
+
+// put in a trash space - soft delete
+// du coup quand tu fais un get all mais que ya un timestamp pour un des item dans la table : celui la ne sera pas montré
+
+Route::get('/softDelete', function(){
+    return Product::where('id', '=', 11)->delete();
+});
+
+// montre elements supprimés donc deleted_at est pas nul
+Route::get('/deletedItems', function(){
+   return Product::onlyTrashed()->get();
+});
+
+// récupère éléments restore la
+Route::get('/restore', function(){
+    $products = Product::onlyTrashed()->restore();
+    return $products;
+});
+
+// create user
+Route::get('/createUser', function(){
+   $user = new User;
+   $user->name = 'Morgane';
+   $user->email = 'morgane@gmail.fr';
+   $user->password = 'hello';
+   $user->is_admin = 0;
+   $user->save();
+});
+
+// ELOQUENT RELATIONSHIPS
+
+/* ONE TO ONE */
+
+// get one product from one user (one-to-one relationship)
+Route::get('/user/{id}/product', function($id){
+//   return User::find($id)->product;
+    return User::find($id)->product->price;
+});
+
+// avec id du produit on retrouve le user lié
+// grace a méthode dans modele Product user défini la
+Route::get('product/{id}/user', function($id){
+   return Product::find($id)->user;
+});
+
+// change value of price for a product related to one user
+Route::get('/postsUser/{id}/price', function($id){
+   $user =  User::find($id);
+   $user->product->price = 5050;
+   return $user;
+});
+
+/* ONE TO MANY */
+// id user appartient a plusieurs produits
+Route::get('/products/{id}', function($id){
+    $user = User::find($id);
+    foreach($user->products as $product){
+        echo $product->price . '€<br/>';
+    }
+});
+
+
