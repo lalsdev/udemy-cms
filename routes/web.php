@@ -196,20 +196,49 @@ Route::get('/products/{id}', function($id){
 });
 
 /* MANY TO MANY */
-// un user peut avoir plusieurs roles
+// id de user -> route va aller chercher tous les roles d'un certain user
 Route::get('/rolesForUser/{id}', function($id){
-    // find c'est une méthode de éloquent qui est statique ?
-   $user = User::find($id);
-   // roles c'est une méthode que moi j'ai défini qui est dans le modele user et qui s'apply sur un objet qui vient de la classe User
-   return $user->roles;
-   // renvoie la row correspondante de role + pivot table avec user_id et role_id
+    $user = User::find($id);
+    return $user->roles;
 });
 
-// ICI CA FOIRE
-// un role peut avoir plusieurs users
+// table users (id, name, email)
+// table roles (id, name -> admin, subscriber)
+// table role_user (id, role_id, user_id) -> grace a la table pivot il trouve le role associé en allant regarder
+// dans cette table le role_id correspondant au user_id et va dans la table roles pour afficher les rows correspondantes
+
+// id de role -> route va chercher tous les users lié a un role
 Route::get('/usersForRole/{id}', function($id){
    $role = Role::find($id);
-    return $role->users;
-   // renvoie row correspondante de users + pivot table avec role_id et user_id
+   return $role->users;
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// un user peut avoir plusieurs roles
+//Route::get('/rolesForUser/{id}', function($id){
+//    // find c'est une méthode de éloquent qui est statique ?
+//   $user = User::find($id);
+//   // roles c'est une méthode que moi j'ai défini qui est dans le modele user et qui s'apply sur un objet qui vient de la classe User
+//   return $user->roles;
+//   // renvoie la row correspondante de role + pivot table avec user_id et role_id
+//});
+//
+//// ICI CA FOIRE
+//// un role peut avoir plusieurs users
+//Route::get('/usersForRole/{id}', function($id){
+//   $role = Role::find($id);
+//    return $role->users;
+//   // renvoie row correspondante de users + pivot table avec role_id et user_id
+//});
