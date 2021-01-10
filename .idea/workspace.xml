@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c67a6da8-d85f-4749-b9d9-74f8defea1e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/Human.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_112718_create_countries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_112959_add_country_id_column_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_083848_create_projects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_083936_create_tasks_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_084025_create_humans_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_13_213813_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_13_213813_create_product_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_155015_add_one_to_one_relationship_to_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_155015_add_one_to_one_relationship_to_product_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_192859_create_users_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_192859_create_users_roles_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +182,20 @@
       <workItem from="1608369541781" duration="9331000" />
       <workItem from="1609062444755" duration="14754000" />
       <workItem from="1609311893674" duration="3541000" />
-      <workItem from="1609573951500" duration="4440000" />
+      <workItem from="1609573951500" duration="27847000" />
+      <workItem from="1609954526671" duration="1752000" />
+      <workItem from="1610006941993" duration="221000" />
+      <workItem from="1610087740169" duration="3098000" />
+      <workItem from="1610269547562" duration="12083000" />
     </task>
+    <task id="LOCAL-00001" summary="add files">
+      <created>1609707262811</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609707262811</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -179,15 +204,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add files" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="540" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608380149433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380149433" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1609143521783">
+    <state x="414" y="0" key="CommitChangelistDialog2" timestamp="1609707262083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1605513942926" />
+    <state x="414" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609707262083" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1610007160660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1610007160660" />
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1024.728@0.0.1536.824" timestamp="1608380108525" />
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1680.1010@0.0.1536.824" timestamp="1609143521783" />
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608454160517" />

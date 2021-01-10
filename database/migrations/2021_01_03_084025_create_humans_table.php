@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddOneToOneRelationshipToProductTable extends Migration
+class CreateHumansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddOneToOneRelationshipToProductTable extends Migration
      */
     public function up()
     {
-        Schema::table('product', function (Blueprint $table) {
-            //$table->integer('user_id')->unsigned();
+        Schema::create('humans', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->bigInteger('project_id');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddOneToOneRelationshipToProductTable extends Migration
      */
     public function down()
     {
-        Schema::table('product', function (Blueprint $table) {
-            //$table->dropColumn('user_id');
-        });
+        Schema::dropIfExists('humans');
     }
 }

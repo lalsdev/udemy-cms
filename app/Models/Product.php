@@ -11,9 +11,15 @@ class Product extends Model
     use HasFactory;
     use SoftDeletes;
     protected $dates = ['delete_at'];
-    protected $fillable = ['price', 'stock', 'size'];
+    protected $fillable = ['price', 'stock', 'size', 'brand'];
     protected $table = 'product';
     public function user(){
         return $this->belongsTo('App\Models\User');
+    }
+    public function country(){
+        return $this->hasOne(Country::class);
+    }
+    public function photos(){
+        return $this->morphMany('App\Models\Photo', 'picturable');
     }
 }

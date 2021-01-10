@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\Country;
+use App\Models\Human;
+use App\Models\Photo;
+use App\Models\Project;
 use App\Models\Role;
+use App\Models\Task;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -197,9 +202,12 @@ Route::get('/products/{id}', function($id){
 
 /* MANY TO MANY */
 // id de user -> route va aller chercher tous les roles d'un certain user
-Route::get('/rolesForUser/{id}', function($id){
-    $user = User::find($id);
-    return $user->roles;
+Route::get('/user/{id}/role', function($id){
+    $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
+    return $user;
+//    foreach($user->roles as $role){
+//        echo $role->name . '<br/>';
+//    }
 });
 
 // table users (id, name, email)
@@ -208,10 +216,92 @@ Route::get('/rolesForUser/{id}', function($id){
 // dans cette table le role_id correspondant au user_id et va dans la table roles pour afficher les rows correspondantes
 
 // id de role -> route va chercher tous les users lié a un role
-Route::get('/usersForRole/{id}', function($id){
-   $role = Role::find($id);
-   return $role->users;
+Route::get('/role/{id}/user', function($id){
+   $user = Role::find($id)->users()->get();
+   return $user;
 });
+
+
+// access pivot table
+Route::get('user/pivot', function(){
+   $user = User::find(1);
+   // ici tu peux utiliser $user->roles pcq roles est une méthode présente dans le modèle user qui est un objet créé de la classe User (modèle)
+   foreach($user->roles as $role){
+       echo $role->pivot->created_at . '<br/>';
+   }
+});
+// access pivot row for user
+Route::get('user/{id}', function($id){
+   $users = Role::find($id)->users()->get();
+   foreach($users as $user){
+       echo $user->name;
+       echo $user->pivot . '<br/>';
+   }
+});
+
+/* HAS MANY THROUGH */
+
+// user table
+// product table
+// country table
+
+// user belongs to country Belgium
+// want to find out through a product where a user is from
+
+// User has many Product
+// Product has one Country
+Route::get('/users/country', function(){
+    $country = Country::find(2);
+    // jusque la ca va
+    // mtn tu passe par la table user pour trouver les produits lié a ce putain de pays
+    return $country;
+});
+
+// Project has many Humans
+// Human has many tasks
+Route::get('/projects', function(){
+    // récupère le projet id = 11
+    $project = Project::find(11);
+
+    return $project->tasks;
+    // retrouve les taches pour l'humain indice 0 (pcq relation has many depuis l'humain)
+    //return $project->humans[0]->tasks;
+//   $project = Project::create([
+//      'name' => 'shop clothes'
+//   ]);
+//
+//   $human3 = Human::create([
+//       'name' => 'Human 3',
+//       'project_id' => $project->id
+//   ]);
+//    $human4 = Human::create([
+//        'name' => 'Human 4',
+//        'project_id' => $project->id
+//    ]);
+//
+//    $human5 = Human::create([
+//        'name' => 'Human 5',
+//        'project_id' => $project->id
+//    ]);
+//
+//    $task4 = Task::create([
+//        'title' => 'Tache 4 Apprendre OS de l\'humain 3',
+//        'human_id' => $human3->id
+//    ]);
+//
+//    $task5 = Task::create([
+//        'title' => 'Tache 5 Apprendre Linux de l\'humain 4',
+//        'human_id' => $human4->id
+//    ]);
+//
+//    $task6 = Task::create([
+//        'title' => 'Tache 6 Apprendre SQL de l\'humain 5',
+//        'human_id' => $human5->id
+//    ]);
+});
+
+
+
 
 
 
@@ -242,3 +332,37 @@ Route::get('/usersForRole/{id}', function($id){
 //    return $role->users;
 //   // renvoie row correspondante de users + pivot table avec role_id et user_id
 //});
+
+/* POLYMORPHIC RELATIONSHIP */
+// un modele est utilisé pour deux autres modeles
+// table photo contient 2 colonnes : imageable_id (id de de l'element) et imageable_type (modele pour element imageable_id)
+Route::get('/polymorphic/product/pictures', function(){
+    $product = Product::find(1);
+    return $product->photos;
+});
+
+Route::get('/polymorphic/user/pictures', function(){
+    $user = User::find(1);
+    return $user->photos;
+});
+
+Route::get('/addData', function(){
+//    Photo::create([
+//       "picturable_id" => 1,
+//       "picturable_type" => 'App\Models\Product'
+//    ]);
+
+//    Photo::create([
+//        "picturable_id" => 1,
+//        "picturable_type" => 'App\Models\User'
+//    ]);
+
+//    Product::create([
+//        "brand" => "Dell",
+//    ]);
+//
+//    User::create([
+//        "name" => "Charlie",
+//    ]);
+
+});

@@ -16,7 +16,7 @@ class CreateUsersRolesTable extends Migration
         Schema::create('role_user', function (Blueprint $table) {
             $table->id();
             $table->integer('role_id');
-            $table->integer('user_id');
+            //$table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateUsersRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_user');
+        Schema::dropIfExists('role_id');
     }
 }
