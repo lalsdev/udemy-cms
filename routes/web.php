@@ -338,23 +338,34 @@ Route::get('/projects', function(){
 // table photo contient 2 colonnes : imageable_id (id de de l'element) et imageable_type (modele pour element imageable_id)
 Route::get('/polymorphic/product/pictures', function(){
     $product = Product::find(1);
-    return $product->photos;
+    $pictures = [];
+    foreach($product->photos as $photo){
+        $pictures[] = $photo->path;
+    }
+    return $pictures;
 });
 
 Route::get('/polymorphic/user/pictures', function(){
     $user = User::find(1);
-    return $user->photos;
+    $pictures = [];
+    foreach($user->photos as $photo){
+
+        $pictures[] = $photo->path;
+    }
+    return $pictures;
 });
 
 Route::get('/addData', function(){
 //    Photo::create([
 //       "picturable_id" => 1,
-//       "picturable_type" => 'App\Models\Product'
+//       "picturable_type" => 'App\Models\Product',
+//       "path" => "dellBlackComputer.jpeg"
 //    ]);
-
+//
 //    Photo::create([
 //        "picturable_id" => 1,
-//        "picturable_type" => 'App\Models\User'
+//        "picturable_type" => 'App\Models\User',
+//        "path" => "CharliePic.jpeg"
 //    ]);
 
 //    Product::create([

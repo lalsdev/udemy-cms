@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c67a6da8-d85f-4749-b9d9-74f8defea1e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Human.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_112718_create_countries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_112959_add_country_id_column_to_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_083848_create_projects_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_083936_create_tasks_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_084025_create_humans_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_13_213813_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_13_213813_create_product_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_155015_add_one_to_one_relationship_to_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_155015_add_one_to_one_relationship_to_product_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_192859_create_users_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_192859_create_users_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_06_174808_create_photos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_174808_create_photos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +174,7 @@
       <workItem from="1609954526671" duration="1752000" />
       <workItem from="1610006941993" duration="221000" />
       <workItem from="1610087740169" duration="3098000" />
-      <workItem from="1610269547562" duration="12083000" />
+      <workItem from="1610269547562" duration="16412000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1609707262811</created>
